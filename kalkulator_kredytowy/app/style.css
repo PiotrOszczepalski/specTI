@@ -1,0 +1,35 @@
+body {
+    background-color: lightgrey;
+}
+
+#kwota, #oprocentowanie, #okres {
+    border-radius: 10px;
+    border-style: solid;
+    border-color: brown;
+    background-color: burlywood;
+    padding: 5px;
+    margin: 3px;
+}
+
+#przycisk {
+    border-radius: 10px;
+    border-style: solid;
+    background-color: burlywood;
+    border-color: brown;
+    margin-left: 8%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#przycisk:hover {
+    background-color: brown;
+    color: burlywood;
+}
+
+#ok {
+    color: green;
+}
+
+#lista {
+    color: red;
+}
