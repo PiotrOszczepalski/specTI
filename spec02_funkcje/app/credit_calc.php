@@ -12,42 +12,42 @@
     function validate(&$kwota, &$oprocentowanie, &$okres, &$messages) {
 
         if (!(isset($kwota) && isset($oprocentowanie) && isset($okres))) {
-            return false;
+            	return false;
         }
 
         if ($kwota == "") {
-        $messages[] = "Nie podano kwoty kredytu.";
+        	$messages[] = "Nie podano kwoty kredytu.";
         }
 
         if ($oprocentowanie == "") {
-        $messages[] = "Nie podano oprocentowania kredytu.";
+        	$messages[] = "Nie podano oprocentowania kredytu.";
         }
 
         if ($okres == "") {
-            $messages[] = "Nie podano czasu trwania kredytu.";
+            	$messages[] = "Nie podano czasu trwania kredytu.";
         }
 
         if (count($messages) != 0) {
-            return false;
+            	return false;
         }
 
         if (!is_numeric($kwota)) {
-            $messages [] = 'Pierwsza wartość nie jest liczbą.';
+            	$messages [] = 'Kwota nie jest liczbą.';
         }
         
         if (!is_numeric($oprocentowanie)) {
-            $messages [] = 'Druga wartość nie jest liczbą.';
+            	$messages [] = 'Oprocentowanie nie jest liczbą.';
         }
         
         if (!is_numeric($okres)) {
-            $messages [] = 'Trzecia wartość nie jest liczbą.';
+            	$messages [] = 'Okres nie jest liczbą.';
         }
     
         if (count($messages) != 0) {
-            return false;
+            	return false;
         }
         else {
-            return true;
+           	return true;
         }
 
     }
