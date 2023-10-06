@@ -24,15 +24,15 @@
     if (empty($messages)) {
 	
         if (!is_numeric($kwota)) {
-            $messages [] = 'Pierwsza wartość nie jest liczbą.';
+            $messages [] = 'Kwota nie jest liczbą.';
         }
         
         if (!is_numeric($oprocentowanie)) {
-            $messages [] = 'Druga wartość nie jest liczbą.';
+            $messages [] = 'Oprocentowanie nie jest liczbą.';
         }
         
         if (!is_numeric($okres)) {
-            $messages [] = 'Trzecia wartość nie jest liczbą.';
+            $messages [] = 'Okres nie jest liczbą.';
         }
     
     }
