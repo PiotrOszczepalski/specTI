@@ -11,7 +11,7 @@
 
     <header>
 
-        <a href="#" class="logo"></a>
+        <a href="#home"><img src="<?php print(_APP_URL);?>/img/logo.png"></a>
 
         <nav>
             <a href="#home" class="active">Home</a>
