@@ -1,0 +1,63 @@
+{extends file="../templates/main.html"}
+
+{block name=content}
+
+<br> <br> <br> <br>
+
+<form action="{$app_url}/app/credit_calc.php" method="post">
+
+    <input type="text" name="kwota" value="{$form['kwota']}" placeholder="Kwota (zł)">
+
+    <br>
+    <br>
+
+    <input type="text" name="oprocentowanie" value="{$form['oprocentowanie']}" placeholder="Oprocentowanie (%)">
+
+    <br>
+    <br>
+
+    <input type="text" name="okres" value="{$form['okres']}" placeholder="Okres (lata)">
+
+    <br>
+    <br>
+
+    <input type="submit" value="Oblicz">
+
+</form>
+
+{if isset($messages)}
+	{if count($messages) > 0} 
+            <ol>
+		{foreach $messages as $msg}
+            
+			<li>{$msg}</li>
+            
+		{/foreach}
+            </ol>
+	{/if}
+{/if}
+
+{if isset($infos)}
+	{if count($infos) > 0} 
+            <ul>
+		{foreach $infos as $msg}
+		    
+            <li>{$msg}</li>
+		
+		{/foreach}
+            </ul>
+	{/if}
+{/if}
+
+{if isset($rata)}
+	<span>Miesięczna rata kredytu wyniesie: {$rata|string_format:"%.2f"} zł.</span>
+{/if}
+    
+{/block}
+
+{block name=footer}
+
+<p>Kontakt: credit@calc.pl</p>
+<img src="{$app_url}/img/baner-kontakt.jpg">
+
+{/block}
